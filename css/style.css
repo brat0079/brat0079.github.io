@@ -101,7 +101,7 @@ body {
     background-size: cover;
     background-position: center;
     /* yang namanya masking itu kebalikan, yang ada warna akan menjadi masknya, yang transparan itu yang akan kelaitannya */
-    mask-image: linear-gradient(rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
 }
 
 
@@ -120,10 +120,10 @@ body {
     position: absolute;
     /* background: salmon; */
     inset: 0;
-    mask-image: url('../img/headerBg.svg');
-    mask-repeat: no-repeat;
-    mask-size: cover;
-    mask-position: center;
+    -webkit-mask-image: url('../img/headerBg.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    -webkit-mask-position: center;
 
 }
 
@@ -205,10 +205,10 @@ body {
 
 .about .row .about-img img {
     width: 100%;
-    mask-image: url('../img/mask-about.svg');
-    mask-size: 58%;
-    mask-repeat: no-repeat;
-    mask-position: center;
+    -webkit-mask-image: url('../img/mask-about.svg');
+    -webkit-mask-size: 58%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
 }
 
 
