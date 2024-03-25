@@ -352,6 +352,54 @@ body {
     padding: 1rem;
 }
 
+.form-container h5 {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.form-container form {
+    width: 100%;
+    text-align: center;
+
+}
+
+.form-container label {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+
+.form-container span {
+    text-align: right;
+}
+
+
+.form-container input {
+    background-color: #ddd;
+    padding: 5px;
+    font-size: 1rem;
+    width: 70%;
+}
+
+
+.form-container .checkout-button {
+    padding: 6px 14px;
+    background-color: royalblue;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 20px;
+    margin: 1rem auto;
+    cursor: pointer;
+}
+
+.form-container .checkout-button.disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
 
 /* menu section */
 .menu h2,

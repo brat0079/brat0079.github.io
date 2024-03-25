@@ -23,8 +23,9 @@ document.querySelector("#search-button").onclick = (e) => {
 //toggle class active untuk Shopping cart
 const shoppingCart = document.querySelector(".shopping-cart");
 // ketika tb_shopping-cart di click
-document.querySelector("#shopping-cart-button").onclick = () => {
+document.querySelector("#shopping-cart-button").onclick = (e) => {
     shoppingCart.classList.toggle("active");
+    e.preventDefault();
 }
 
 

@@ -104,6 +104,33 @@ document.addEventListener('alpine:init', () => {
 });
 
 
+// Form Validation
+const checkoutButton = document.querySelector('.checkout-button');
+checkoutButton.disabled = true;
+
+
+//validasinya kita gk mau ada satupun elemen input yang kosong, kita telusuri semua input, cek ada valuenya yg, kalau belom atau kosong tombol akan tetap disabled. tapi jika semua udh keisi maka nyalakan tombolnya 
+// yang pertama kita ambil dulu form nya dengan cara
+const form = document.querySelector('#checkoutForm');
+
+form.addEventListener("keyup", function () {
+    for(let i = 0; i < form.elements.length ; i++) {
+        if (form.elements[i].value.length !== 0) {
+            checkoutButton.classList.remove("disabled");
+            checkoutButton.classList.add("disabled");
+        } else {
+            return false;
+        }
+    }
+    checkoutButton.disabled = false;
+    checkoutButton.classList.remove("disabled");
+});
+
+
+
+
+
+
 // konversi price ke rupiah
 const rupiah = (number) => {
     return Intl.NumberFormat('id-ID', {
