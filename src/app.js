@@ -127,6 +127,28 @@ form.addEventListener("keyup", function () {
 });
 
 
+// kirim data ketika tombol checkout di klik
+checkoutButton.addEventListener('click', function (e) {
+    // tadi default nya di klik akan kembali ke home, kita bajak supaya tidak terjadi
+    e.preventDefault();
+
+    // skrng kita ingin ambil data di dalam form nya, kita ambil formData
+    const formData = new FormData(form);
+    //data yang di ambil dari form, lalu datanya kita konversi karena form di kirim menggunakan methode GET karena kita gk masukin method nya, otomatis akan by default yaitu method GET, kalau kita mengirimkan dengan method GET artinya datanya kelihatan didalam url
+    
+    // kita ambil datanya di url
+    const data = new URLSearchParams(formData);
+    
+    // setelah didapat kita konversi string yang dikirim menjadi object
+    const objData = Object.fromEntries(data);
+
+    console.info(objData);
+})
+
+
+// format pesan pada whatsApps
+const formatMessage = (obj)
+
 
 
 
