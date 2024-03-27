@@ -142,12 +142,27 @@ checkoutButton.addEventListener('click', function (e) {
     // setelah didapat kita konversi string yang dikirim menjadi object
     const objData = Object.fromEntries(data);
 
-    console.info(objData);
-})
+    //variable message
+    const message = formatMessage(objData);
+
+    //kita akan menjalankan sebuah layanan yang namanya WA.Me dengan membuka window baru, yang nomor telephonennya kita sebagai seller, jadi nanti customer yang akan otomatis ngebuka window yang sudah tertampil wanya. dan otomatis akan terkirim messagenya, dan harus bener dan format harus nama negara.
+    window.open('http://wa.me/6281511213949?text=' + encodeURIComponent(message));
+});
 
 
 // format pesan pada whatsApps
-const formatMessage = (obj)
+const formatMessage = (obj) => {
+    return `Data Customer
+    Nama : ${obj.name}
+    Email : ${obj.email}
+    No HP : ${obj.phone}
+Data Pesanan 
+    ${JSON.parse(obj.items).map((item) => `${item.name} (${item.quantity} x ${rupiah(item.total)}) \n`)}
+Total pesanan : ${rupiah(obj.total)} 
+Terima Kasih Dan Selamat Menikmati.
+    `;
+    
+};
 
 
 
